@@ -18,14 +18,6 @@ usarCtrl.crearEvento=async(req,res)=>{
     const evento=await Evento.find();
     return res.status(200).json({ evento });
   };
-// modificar evento
-usarCtrl.crearEvento=async(req,res)=>{
-  const proyecto = new Evento(req.body);
-  await proyecto
-    .save()
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-};
 
 //Obtener productos en general
 usarCtrl.obtenerEventos=async(req,res)=>{
