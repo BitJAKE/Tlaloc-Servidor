@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/BitJAKE/Tlaloc-Servidor#readme",
   "dependencies": {
+    "cloudinary": "^1.30.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
     "express-handlebars": "^6.0.6",
     "fs-extra": "^10.1.0",
     "mongoose": "^6.3.8",
