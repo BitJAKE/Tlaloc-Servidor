@@ -1,56 +1,53 @@
 const usarCtrl= {};
 
-const Evento= require('../models/Evento')
+const Actividad= require('../models/Actividad')
 const Imagen= require('../models/Image')
 const cloudinary = require('../utils/cloudinary')
 const fs = require('fs-extra')
 
-usarCtrl.crearEvento=async(req,res)=>{
-    const proyecto = new Evento(req.body);
+usarCtrl.crearActividad=async(req,res)=>{
+    const proyecto = new Actividad(req.body);
     await proyecto
       .save()
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   };
 
-  //Obtener productos en general
+  //Obtener eventos en general
   usarCtrl.obtenerEventos=async(req,res)=>{
-    const evento=await Evento.find();
+    const evento=await Actividad.find({tipo:'evento'});
     return res.status(200).json({ evento });
   };
 
-//Obtener productos en general
-usarCtrl.obtenerEventos=async(req,res)=>{
-  const evento=await Evento.find();
-  return res.status(200).json({ evento });
+//Obtener blog en general
+usarCtrl.obtenerBlog=async(req,res)=>{
+  const blog=await Actividad.find({tipo:'blog'});
+  return res.status(200).json({ blog });
 };
 
-//eliminar evento
-usarCtrl.eliminarEvento = async (req, res) => {
+//eliminar actividad
+usarCtrl.eliminarActividad = async (req, res) => {
   const { id } = req.params;
   // prevenir tareas duplicadas
-  const evento =  await Evento.findById(id);
-  if (!evento) {
-    const error = new Error("Evento incorrecto");
+  const actividad =  await Actividad.findById(id);
+  if (!actividad) {
+    const error = new Error("Actividad incorrecto");
     return res.status(404).json({ msg: error.message });
   }
   try {
-    console.log(evento.imagenes)
+    console.log(actividad.imagenes)
     
   
     // eliminar antes las imagnes
 
-    evento.imagenes.forEach(element => 
+    actividad.imagenes.forEach(element => 
       deleteImage(element)
       
       );
      
-      await evento.deleteOne();
-    
-   // await evento.deleteOne()
+      await actividad.deleteOne();
 
-
-    res.json({ msg: "Evento eliminado" });
+    res.json({ msg: "Actividad eliminada" });
   } catch (error) {
     console.log(error);
   }
@@ -64,7 +61,7 @@ const deleteImage = async function(idImagen) {
         return
     }
     try {
-        const evento = await Evento.findById(imagenEncontrada.evento);
+        const actividad = await Actividad.findById(imagenEncontrada.actividad);
         await cloudinary.deleteImage(imagenEncontrada.public_id)
        // evento.imagenes.pull(imagenEncontrada._id);
        // await Promise.allSettled([await evento.save(), await imagenEncontrada.deleteOne()]);
@@ -75,23 +72,23 @@ const deleteImage = async function(idImagen) {
     }
 }
 
-//actualizar evento
-usarCtrl.actualizarEvento = async (req, res) => {
+//actualizar actividad
+usarCtrl.actualizarActividad = async (req, res) => {
   const { id } = req.params;
   // prevenir tareas duplicadas
-  const evento =  await Evento.findById(id);
-  if (!evento) {
-    const error = new Error("Evento incorrecto");
+  const actividad =  await Actividad.findById(id);
+  if (!actividad) {
+    const error = new Error("Actividad incorrecta");
     return res.status(404).json({ msg: error.message });
   }
-  evento.nombre = req.body.nombre ||  evento.nombre;
-  evento.telefono = req.body.telefono || evento.telefono ;
-  evento.direccion = req.body.direccion ||evento.direccion ;
-  evento.descripcion = req.body.descripcion || evento.descripcion;
+  actividad.nombre = req.body.nombre ||  actividad.nombre;
+  actividad.telefono = req.body.telefono || actividad.telefono ;
+  actividad.direccion = req.body.direccion ||actividad.direccion ;
+  actividad.descripcion = req.body.descripcion || actividad.descripcion;
 
   try {
-    const eventoActualizado = await evento.save();
-    res.json(eventoActualizado)
+    const actividadActualizada = await actividad.save();
+    res.json(actividadActualizada)
   } catch (error) {
     console.log(error);
   }

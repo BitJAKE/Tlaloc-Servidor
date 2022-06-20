@@ -16,6 +16,9 @@ const eventoSchema = new Schema({
   descripcion: {
     type: String
   },
+  tipo: {
+    type: String
+  },
   imagenes: [
     {
       type: Schema.Types.ObjectId,

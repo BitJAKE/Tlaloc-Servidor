@@ -7,9 +7,9 @@ const imageSchema = new Schema({
   secure_url: {
     type: String
   },
-  evento: {
+  actividad: {
     type: Schema.Types.ObjectId,
-    ref: "Evento",
+    ref: "Actividad",
    }
 },
   {

@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 
 //Rutas para nuestra coleccion de datos
 app.use('/api/image',require('./routes/imageRouter'));
-app.use('/api/evento',require('./routes/eventoRouter'));
+app.use('/api/actividad',require('./routes/actividadRouter'));
 
 
 //Exportaciones de todas las configuraciones que van a index.js
