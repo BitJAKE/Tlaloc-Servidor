@@ -1,16 +1,16 @@
 const usarCtrl= {};
 
 const Imagen= require('../models/Image')
-const Evento= require('../models/Evento')
+const Actividad= require('../models/Actividad')
 const cloudinary = require('../utils/cloudinary')
 const fs = require('fs-extra')
 
 
 usarCtrl.insertarImagen=async(req,res)=>{
-    const { evento_id } = req.body;
-    const existeEvento = await Evento.findById(evento_id);
-    if (!existeEvento) {
-        const error = new Error("El evento no existe");
+    const { actividad_id } = req.body;
+    const existeActividad = await Actividad.findById(actividad_id);
+    if (!existeActividad) {
+        const error = new Error("El actividad no existe");
         return res.status(404).json({ msg: error.message });
     }
 
@@ -24,15 +24,15 @@ usarCtrl.insertarImagen=async(req,res)=>{
                 url: result.url,
                 public_id: result.public_id,
                 secure_url: result.secure_url ,
-                evento: evento_id
+                actividad: actividad_id
 
             })
             await fs.unlink(req.files.image.tempFilePath);
             await imagenAlmacenada.save()
             
             // Almacenar el ID en el proyecto
-            existeEvento.imagenes.push(imagenAlmacenada._id);
-            await existeEvento.save();
+            existeActividad.imagenes.push(imagenAlmacenada._id);
+            await existeActividad.save();
            
             res.json(imagenAlmacenada);
         
@@ -66,10 +66,10 @@ usarCtrl.eliminarImagen = async (req, res) => {
         return res.status(400).json({ msg: error.message });
     }
     try {
-        const evento = await Evento.findById(imagenEncontrada.evento);
+        const actividad = await Actividad.findById(imagenEncontrada.actividad);
         await cloudinary.deleteImage(imagenEncontrada.public_id)
-        evento.imagenes.pull(imagenEncontrada._id);
-        await Promise.allSettled([await evento.save(), await imagenEncontrada.deleteOne()]);
+        actividad.imagenes.pull(imagenEncontrada._id);
+        await Promise.allSettled([await actividad.save(), await imagenEncontrada.deleteOne()]);
         res.json({ msg: "Imagen eliminado correctamente" });
     } catch (error) {
         console.log(error);
