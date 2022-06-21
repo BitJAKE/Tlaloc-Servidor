@@ -2,7 +2,7 @@
 
 🌳​ Servidor para Tláloc creado con Node, Express y Mongo 🌳​
 
-## ⌛ Instalar dependencias 
+## ⚙ Instalar dependencias 
 ```bash
 npm i
 ```
@@ -20,13 +20,14 @@ npm i express
 4. Levantar el proyecto
    `npm run dev`
 
-## 🛠 Iniciar con Tareas
-⚡Si es para una caracteristica nueva crear una rama especifica desde develop, Con la siguiente estructura:
+## 💻​🔨​ Iniciar con Tareas
+- ⚡Si es para una caracteristica nueva crear una rama especifica desde develop, Con la siguiente estructura:
     `feature/caracteristica `
-⚡Si es para corregir un error crear una rama especifica desde develop, Con la siguiente estructura:
+
+- ⚡Si es para corregir un error crear una rama especifica desde develop, Con la siguiente estructura:
     `hotfix/correcion `
 
-## 🛠 Documentar
+## 🗂 Documentar
 ✍Colocar la documentacion de los endpoint en postman. Separar por cada modelo. La estructura es la siguiente
  
 1.   🌿​ Nombre o titulo del enpoint 
@@ -36,9 +37,9 @@ npm i express
 5.   🤙 Códigos
 6.   ☠ Errores
 
-## 🛠 Tecnologias 
-1.  Node js y Express 🌳
-2.  Mongo DB 🍁
-3.  Cloudinary 🍀
+## 💻​ Tecnologias (Documentación)
+1.  [Node js y Express](https://nodejs.org/en/docs/) 🌳 
+2.  [Mongo DB](https://www.mongodb.com/docs/) 🍁
+3.  [Cloudinary](https://cloudinary.com/documentation) 🍀
 
 
