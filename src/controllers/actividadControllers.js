@@ -85,6 +85,7 @@ usarCtrl.actualizarActividad = async (req, res) => {
   actividad.telefono = req.body.telefono || actividad.telefono ;
   actividad.direccion = req.body.direccion ||actividad.direccion ;
   actividad.descripcion = req.body.descripcion || actividad.descripcion;
+  actividad.usuario = req.body.usuario || actividad.usuario;
 
   try {
     const actividadActualizada = await actividad.save();
