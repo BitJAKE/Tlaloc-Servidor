@@ -16,18 +16,30 @@ const eventoSchema = new Schema({
   descripcion: {
     type: String
   },
-  tipo: {
-    type: String
-  },
+  
   usuario: {
     type: String
   },
+  fecha_hora: {
+    type: Date
+  },
+  estado: {
+    type: String
+  },
+  lugar: {
+    type: String
+  },
+ 
+
   imagenes: [
     {
       type: Schema.Types.ObjectId,
       ref: "Image"
     }
-  ]
+  ],
+  tipo: {
+    type: String
+  },
 },
   {
     timestamps: true,
