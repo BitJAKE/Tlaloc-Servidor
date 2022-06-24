@@ -7,6 +7,11 @@ usarCtrl.crearContenido=async(req,res)=>{
 
 
             const { id } = req.params;
+            if(id === undefined){
+              const error = new Error("no existe");
+              return res.status(400).json({ msg: error.message });
+          
+          }
             const existeActividad = await Actividad.findById(id);
             if (!existeActividad) {
                 const error = new Error("La actividad no existe");
@@ -31,6 +36,12 @@ usarCtrl.crearContenido=async(req,res)=>{
   //Obtener contenido
   usarCtrl.obtenerContenido=async(req,res)=>{
     const { id } = req.params;
+    if(id === undefined){
+      const error = new Error("no existe");
+      return res.status(400).json({ msg: error.message });
+  
+  }
+
     const contenidoEncontrado = await Contenido.findById(id);
     if (!contenidoEncontrado ) {
         const error = new Error("contenido no encontrado");

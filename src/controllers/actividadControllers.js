@@ -28,6 +28,11 @@ usarCtrl.obtenerBlog=async(req,res)=>{
 //eliminar actividad
 usarCtrl.eliminarActividad = async (req, res) => {
   const { id } = req.params;
+  if(id === undefined){
+    const error = new Error("no existe");
+    return res.status(400).json({ msg: error.message });
+
+}
   // prevenir tareas duplicadas
   const actividad =  await Actividad.findById(id);
   if (!actividad) {
@@ -75,6 +80,11 @@ const deleteImage = async function(idImagen) {
 //actualizar actividad
 usarCtrl.actualizarActividad = async (req, res) => {
   const { id } = req.params;
+  if(id === undefined){
+    const error = new Error("no existe");
+    return res.status(400).json({ msg: error.message });
+
+}
   // prevenir tareas duplicadas
   const actividad =  await Actividad.findById(id);
   if (!actividad) {

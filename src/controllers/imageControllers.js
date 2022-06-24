@@ -110,6 +110,11 @@ usarCtrl.obtenerImagen = async (req, res) => {
 
 usarCtrl.eliminarImagen = async (req, res) => {
     const { id } = req.params;
+    if(id === undefined){
+        const error = new Error("Imagen no existe");
+        return res.status(400).json({ msg: error.message });
+    
+    }
     const imagenEncontrada = await Imagen.findById(id);
     if (!imagenEncontrada ) {
         const error = new Error("Imagen no existe");
