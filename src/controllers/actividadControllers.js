@@ -84,7 +84,9 @@ usarCtrl.actualizarActividad = async (req, res) => {
     const error = new Error("no existe");
     return res.status(400).json({ msg: error.message });
 
-}
+} 
+
+
   // prevenir tareas duplicadas
   const actividad =  await Actividad.findById(id);
   if (!actividad) {

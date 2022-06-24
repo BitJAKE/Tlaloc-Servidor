@@ -90,11 +90,8 @@ usarCtrl.insertarImagenContenido=async(req,res)=>{
 
 usarCtrl.obtenerImagen = async (req, res) => {
     const { id } = req.params;
-    if(id === undefined){
-        const error = new Error("Imagen no existe");
-        return res.status(400).json({ msg: error.message });
-    
-    }
+    if (!mongoose.Types.ObjectId.isValid(id)) 
+            return res.status(404).json({ msg: `No task with id :${id}` });
     const imagenEncontrada = await Imagen.findById(id);
     if (!imagenEncontrada ) {
         const error = new Error("Imagen no existe");
