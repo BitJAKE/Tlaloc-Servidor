@@ -10,6 +10,10 @@ const imageSchema = new Schema({
   actividad: {
     type: Schema.Types.ObjectId,
     ref: "Actividad",
+   },
+   contenido: {
+    type: Schema.Types.ObjectId,
+    ref: "Contenido",
    }
 },
   {

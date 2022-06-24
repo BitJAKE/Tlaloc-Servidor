@@ -29,7 +29,12 @@ const eventoSchema = new Schema({
   lugar: {
     type: String
   },
- 
+  contenido: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Contenido"
+    }
+  ],
 
   imagenes: [
     {
