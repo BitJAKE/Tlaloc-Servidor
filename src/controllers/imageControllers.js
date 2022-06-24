@@ -5,8 +5,6 @@ const Actividad= require('../models/Actividad')
 const Contenido= require('../models/Contenido')
 const cloudinary = require('../utils/cloudinary')
 const fs = require('fs-extra')
-require('mongoose')
-
 
 
 usarCtrl.insertarImagen=async(req,res)=>{
@@ -92,8 +90,6 @@ usarCtrl.insertarImagenContenido=async(req,res)=>{
 
 usarCtrl.obtenerImagen = async (req, res) => {
     const { id } = req.params;
-    if (!mongoose.Types.ObjectId.isValid(id)) 
-            return res.status(404).json({ msg: `No task with id :${id}` });
     const imagenEncontrada = await Imagen.findById(id);
     if (!imagenEncontrada ) {
         const error = new Error("Imagen no existe");
