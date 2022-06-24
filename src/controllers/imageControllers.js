@@ -5,8 +5,6 @@ const Actividad= require('../models/Actividad')
 const Contenido= require('../models/Contenido')
 const cloudinary = require('../utils/cloudinary')
 const fs = require('fs-extra')
-require('mongoose')
-
 
 
 usarCtrl.insertarImagen=async(req,res)=>{
