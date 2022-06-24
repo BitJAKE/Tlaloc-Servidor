@@ -25,6 +25,7 @@ app.get('/',(req,res)=>{
 
 //Rutas para nuestra coleccion de datos
 app.use('/api/image',require('./routes/imageRouter'));
+app.use('/api/contenido',require('./routes/contenidoRouter'));
 app.use('/api/actividad',require('./routes/actividadRouter'));
 
 
