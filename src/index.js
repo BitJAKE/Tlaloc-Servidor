@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const app = require('./app')
-require('./conection/db')
+require('./connection/db')
 
 
 // Esta logica es para ejecutar el servidor
