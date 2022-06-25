@@ -1,14 +1,15 @@
 # Tlaloc-Servidor
 
-🌳​ Proyecto que da soporte al Backend del producto Tlaloc de BitJake. Contiene los modulos para gestion de eventos y blogs. Las tecnologias que se utilizaron para este proyecto son 
-Node js 🍄
-Express  🌼
-MongoDB ​☘
+🌳​ Proyecto que da soporte al Backend del producto Tlaloc de BitJake. Contiene los modulos para gestion de eventos y blogs. Las tecnologias que se utilizaron para este proyecto son:
+
+- Node js 🍄
+- Express  🌼
+- MongoDB ​☘
 
 ## ​🖥️​ Requerimientos necesarios para que el proyecto funcione
-- Node js ➡ 16.14.2 
-- Express ➡ 4.18.1
-- MongoDB ➡ 1.32.2
+- Node js 👉🏼​ 16.14.2 
+- Express 👉🏼​ 4.18.1
+- MongoDB 👉🏼​ 1.32.2
 
 ## ⚙ Instalar dependencias 
 ```bash
@@ -80,8 +81,8 @@ La estructura del archivo `.env` es la siguiente:
 ## ​🦚​ Despliegue
 Para desplegar se utilizo `HEROKU`, el cual nos facilita los despliegues por la conexion con Github. 
 Se tienen dos entornos:
-- Entorno de producciòn: se utiliza la version màs estable del proyecto y contiene la version de codigo que va a producciòn
-- Entorno de desarrollo: se utilizara para realizar pruebas y para agregar nuevas caracteristicas
+- **Entorno de producción**: se utiliza la version màs estable del proyecto y contiene la version de codigo que va a producciòn
+- **Entorno de desarrollo**: se utilizara para realizar pruebas y para agregar nuevas caracteristicas
 
 El reto en `HEROKU` es al configurar las variables de entorno, ya que se debe tener encuenta el tipo de variable y como estas cambian en cada entorno
 
