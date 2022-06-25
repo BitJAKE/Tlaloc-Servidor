@@ -19,7 +19,7 @@ npm i
 ```bash
 npm i express
 ```
-## ​🦜​ Descripción sobre Estructura de trabajo
+## ​🕷️​​ Descripción sobre Estructura de trabajo
 En bitJAKE se trabaja con una estructura en base a funciones, es decir que clasificamos los archivos en carpetas de acuerdo a la funcion que tienen. La estructura es la siguiente:
 
 ```
