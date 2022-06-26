@@ -88,12 +88,12 @@ La estructura del archivo `.env` es la siguiente:
 4.  [Cloudinary](https://cloudinary.com/documentation) 🍀
 
 ## ​🦚​ Despliegue
-Para desplegar se utilizo `HEROKU`, el cual nos facilita los despliegues por la conexion con Github. 
+Para desplegar se utilizó  `HEROKU`, el cual nos facilita los despliegues por la conexion con GitHub. 
 Se tienen dos entornos:
-- **Entorno de producción**: se utiliza la version màs estable del proyecto y contiene la version de codigo que va a producciòn
-- **Entorno de desarrollo**: se utilizara para realizar pruebas y para agregar nuevas caracteristicas
+- **Entorno de producción**: se utiliza la versión  más  estable del proyecto y contiene la version de codigo que va a producciòn
+- **Entorno de desarrollo**: se utilizara para realizar pruebas y para agregar nuevas características
 
-El reto en `HEROKU` es al configurar las variables de entorno, ya que se debe tener encuenta el tipo de variable y como estas cambian en cada entorno
+El reto en `HEROKU` es al configurar las variables de entorno, ya que se debe tener en cuenta el tipo de variable y como estas cambian en cada entorno
 
 ## 💻​ Más Información
 
