@@ -8,7 +8,7 @@ Ellos han decidido crear su primer página para apoyo al medio ambiente. Son cre
 # Tlaloc-Servidor
 > "Help Tip" - Utilizar tema dark 
 
-![BitJake](https://res.cloudinary.com/dzdoi1gfv/image/upload/v1656224813/TlalocLogo_kvw9dg.png)
+![BitJake](https://res.cloudinary.com/dzdoi1gfv/image/upload/v1656278672/TlalocMThem_jrfeei.png)
 
 🌳​ Proyecto que da soporte al Backend del producto Tlaloc de BitJake. Contiene los modulos para gestion de eventos y blogs. Las tecnologias que se utilizaron para este proyecto son:
 
