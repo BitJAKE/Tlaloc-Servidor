@@ -6,7 +6,6 @@ Ellos han decidido crear su primer página para apoyo al medio ambiente. Son cre
 ![BitJake](https://res.cloudinary.com/dzdoi1gfv/image/upload/v1656278263/logoMThem_b8lsk0.png)
 
 # Tlaloc-Servidor
-> "Help Tip" - Utilizar tema dark 
 
 ![BitJake](https://res.cloudinary.com/dzdoi1gfv/image/upload/v1656278672/TlalocMThem_jrfeei.png)
 
