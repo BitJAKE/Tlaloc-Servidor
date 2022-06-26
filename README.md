@@ -1,4 +1,7 @@
 # Tlaloc-Servidor
+> "Help Tip" - Utilizar tema dark 
+
+![BitJake](https://res.cloudinary.com/dzdoi1gfv/image/upload/v1656224813/TlalocLogo_kvw9dg.png)
 
 🌳​ Proyecto que da soporte al Backend del producto Tlaloc de BitJake. Contiene los modulos para gestion de eventos y blogs. Las tecnologias que se utilizaron para este proyecto son:
 
@@ -37,11 +40,11 @@ La estructura del archivo `.env` es la siguiente:
 
 ```
 - MONGODB_URI : es la URL de la BD de mongoDB
-- CLOUD_NAME : es el nombre del repositorio para las imàgenes en Cloudinary
-- API_KEY: es la llave para acceder al repositorio de imàgenes Cloudinary
-- API_SECRET: llave secreta para acceder a las funciones del repositorio de imàgenes Cloudinary
+- CLOUD_NAME : es el nombre del repositorio para las imágenes en Cloudinary
+- API_KEY: es la llave para acceder al repositorio de imágenes Cloudinary
+- API_SECRET: llave secreta para acceder a las funciones del repositorio de imágenes Cloudinary
 - CLOUDINARY_URL: es la URL de Cloudinary
-- FOLDER : Nombre de la carpeta donde se almacenaran las imàgenes
+- FOLDER : Nombre de la carpeta donde se almacenaran las imágenes
 ```
 
 ## 🛠 Instalación
@@ -86,7 +89,10 @@ Se tienen dos entornos:
 
 El reto en `HEROKU` es al configurar las variables de entorno, ya que se debe tener encuenta el tipo de variable y como estas cambian en cada entorno
 
-## Autores ✒️
+## 💻​ Más Información
 
-* **Zoila Sánchez** - *Desarrolladora Backend* - [ZoilaSanchez](https://github.com/ZoilaSanchez)
-* **Andrea Morales** - *Desarrolladora Backend* - [AndreaMorales](https://github.com/AGMH16)
+## Autores ✒️
+* [Kelvin-Cano](https://github.com/Allecan) - *UI Developer*
+* [Fernando-Juarez](https://github.com/Rafterminador) - *Front-end Developer* 
+* [Zoila-Sánchez](https://github.com/ZoilaSanchez) - *Desarrolladora Backend*
+* [Andrea-Morales](https://github.com/AGMH16) - *Desarrolladora Backend* 
